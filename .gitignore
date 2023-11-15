@@ -1,3 +1,4 @@
+Cargo.lock
 luarocks
 lua
 lua_modules
@@ -10,6 +11,7 @@ tl*
 /lua
 /lua_modules
 /.luarocks
+/target/
 scratch.tl
 tree-sitter-c
 _Makefile

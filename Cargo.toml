@@ -1,0 +1,28 @@
+[package]
+name = "mlua-tree-sitter"
+version = "0.1.0"
+authors = ["Douglas Creager <dcreager@dcreager.net>"]
+edition = "2021"
+repository = "https://github.com/dcreager/ltreesitter"
+license = "MIT"
+description = """
+Provides access to tree-sitter parse trees in Lua code managed by the mlua crate.
+"""
+
+build = "rust/build.rs"
+links = "ltreesitter"
+
+[lib]
+path = "rust/lib.rs"
+
+[dependencies]
+mlua = { version = "0.9" }
+mlua-sys = { version = "0.3" }
+tree-sitter = { version = "0.20" }
+
+[build-dependencies]
+cc = "1.0"
+
+[dev-dependencies]
+anyhow = { version = "1" }
+tree-sitter-python = { version = "0.20" }
